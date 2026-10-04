@@ -1,0 +1,14 @@
+###header start###
+precision at the hour level
+#event: CME occurrence time
+#Object: Spacecrafts or planets
+#start: Cone-zone entering time
+#end: Cone-zone exiting time
+#distance1: entering distance from the sun (km)
+#distance2: exiting distance from the sun (km)
+event
+Object	start	end	distance1	distance2
+###header end###
+2022-09-05T16:36:00
+PSP	2022-09-05T18:51:00	2022-09-05T18:51:00	10237290.3	10237290.3
+

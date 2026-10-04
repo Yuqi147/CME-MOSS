@@ -1,0 +1,90 @@
+{
+  "parameters": {
+    "start_date": "2022-09-05",
+    "end_date": "2022-09-06",
+    "speed_tolerance_km_s": 100.0,
+    "min_shell_speed_km_s": 400.0,
+    "angle_tolerance_deg": 10.0,
+    "propagation_window_days": 9.0,
+    "bodies": [
+      "PSP",
+      "connected",
+      "Earth"
+    ],
+    "propagation_model": "parker_drag",
+    "ambient_wind_km_s": 400.0,
+    "drag_parameter_km": 2e-08,
+    "v_sw_km_s": 400.0,
+    "launch_radius_km": 695700.0,
+    "encounter_time_window_hours": 10.0,
+    "encounter_tolerance_km": 1000.0,
+    "icme_half_thickness_km": 14959787.07,
+    "parker_wind_speeds_km_s": []
+  },
+  "events": [
+    {
+      "trigger_time": "2022-09-05T19:03",
+      "lat_deg": -25,
+      "lon_deg": 177,
+      "half_width_deg": 60,
+      "speed_km_s": 1377,
+      "event_time": "2022-09-05T16:36:00",
+      "cme_id": "CME-001",
+      "source": "M2M_CATALOG",
+      "catalog_flag": "true",
+      "cme_type": "LE"
+    }
+  ],
+  "encounters": [
+    {
+      "event": {
+        "trigger_time": "2022-09-05T19:03",
+        "lat_deg": -25,
+        "lon_deg": 177,
+        "half_width_deg": 60,
+        "speed_km_s": 1377,
+        "event_time": "2022-09-05T16:36:00",
+        "cme_id": "CME-001",
+        "source": "M2M_CATALOG",
+        "catalog_flag": "true",
+        "cme_type": "LE"
+      },
+      "bodies": {
+        "PSP": {
+          "body": "PSP",
+          "enter_index": 9,
+          "exit_index": 22,
+          "enter_time": "2022-09-05T18:51:00",
+          "exit_time": "2022-09-05T22:06:00",
+          "enter_radius_km": 10237000.0,
+          "exit_radius_km": 10237000.0,
+          "n_points": 14,
+          "verdict": "confirmed",
+          "sweep_time": "2022-09-05T18:37:03",
+          "sweep_index": 8,
+          "sweep_radius_km": 10237000.0,
+          "front_speed_km_s": 1255.5667559051074,
+          "angular_separation_deg": 3.5489943524254826,
+          "tolerance_km": 1000.0
+        },
+        "connected": {
+          "body": "connected",
+          "enter_index": 51,
+          "exit_index": 55,
+          "enter_time": "2022-09-07T19:36:00",
+          "exit_time": "2022-09-07T23:36:00",
+          "enter_radius_km": 149597870.7,
+          "exit_radius_km": 149597870.7,
+          "n_points": 5,
+          "verdict": "confirmed",
+          "sweep_time": "2022-09-07T19:16:50",
+          "sweep_index": 51,
+          "sweep_radius_km": 149597870.7,
+          "front_speed_km_s": 614.0155324409016,
+          "angular_separation_deg": 0.0,
+          "tolerance_km": 1000.0
+        }
+      }
+    }
+  ]
+}

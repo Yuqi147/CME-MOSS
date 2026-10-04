@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cmemoss"
+version = "1.0.0"
+description = "Research-grade multi-spacecraft CME / ICME data analysis software"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "CME-MOSS contributors" }]
+
+# Core runtime dependencies.
+# Notes versus the legacy code:
+#   * scipy     removed - the KDTree was only ever built for a single CME point;
+#                          angular geometry is now vectorised with numpy.
+#   * pandas    removed - the DONKI table is now a typed list of CMEEvent.
+#   * dateutil  removed - time parsing goes through sunpy/astropy.
+#   * bs4       was only present in a commented-out import.
+dependencies = [
+    "numpy>=1.26",
+    "astropy>=6.0",
+    "sunpy>=6.0",
+    "matplotlib>=3.8",
+    "requests>=2.31",
+]
+
+[project.optional-dependencies]
+# Heavy in-situ data stack (CDAWeb downloads / pytplot). Only required for the
+# in-situ layer; orbit geometry, cone search and plotting work without it.
+insitu = [
+    "pyspedas>=1.7",
+]
+dev = [
+    "pytest>=8.0",
+]
+
+[project.scripts]
+cmemoss = "cmemoss.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["cmemoss*"]
+exclude = ["legacy*", "tests*", "docs*"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
