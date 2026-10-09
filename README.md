@@ -251,10 +251,10 @@ If you use CME-MOSS in research, please cite the software (version 1.0.0):
 ```bibtex
 @software{cmemoss,
   title  = {CME-MOSS: Coronal Mass Ejection Multiple Objects Search Software},
-  author = {CME-MOSS contributors},
+  author = {Zhang, Yuqi and Romeo, Orlando M.},
   year   = {2026},
   version = {1.0.0},
-  url    = {https://github.com/your-org/CME-MOSS}  % replace with the repository URL
+  url    = {https://github.com/Yuqi147/CME-MOSS}
 }
 ```
 
